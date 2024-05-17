@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <body style="background-color: grey">
+    <center>
+      <div>
+        <h1>
+          <b>
+            <center>calculator</center>
+          </b>
+        </h1>
+        <div style="background-color: black; display: inline-block">
+          <center>
+            <span style="color: white; text-align: right">
+              <p id="result" style="padding-right: 20px; font-size: 25px">0</p>
+            </span>
+            <section>
+              <button
+                onclick="a = '0', str = a, document.getElementById('result').innerHTML = str, operator = '0' "
+                style="
+                  background: linear-gradient(
+                    to right,
+                    yellow,
+                    rgb(247, 204, 15),
+                    orange
+                  );
+                "
+              >
+                AC
+              </button>
+              <button
+                onclick="str = str.slice(0, -1), a = parseFloat(str) + '' ,a = (str == '') ? '0': a, str = a, document.getElementById('result').innerHTML = str"
+                style="
+                  background: linear-gradient(
+                    to right,
+                    yellow,
+                    rgb(247, 204, 15),
+                    orange
+                  );
+                "
+              >
+                [x]
+              </button>
+              <button
+                onclick="a = a/100, str = String(a), document.getElementById('result').innerHTML = str;"
+                style="
+                  background: linear-gradient(
+                    to right,
+                    yellow,
+                    orange,
+                    rgb(240, 145, 68)
+                  );
+                "
+              >
+                %
+              </button>
+              <button
+                class="123"
+                onclick="op('/');"
+                style="
+                  background: linear-gradient(
+                    to right,
+                    rgb(243, 243, 93),
+                    rgb(230, 174, 70),
+                    orange
+                  );
+                "
+              >
+                /
+              </button>
+            </section>
+            <section>
+              <button onclick="inc(1)">1</button>
+              <button onclick="inc(2)">2</button>
+              <button onclick="inc(3)">3</button>
+              <button
+                onclick="op('X');"
+                style="
+                  background: linear-gradient(
+                    to right,
+                    yellow,
+                    rgb(236, 170, 45),
+                    orange
+                  );
+                "
+              >
+                X
+              </button>
+            </section>
+            <section>
+              <button onclick="inc(4)">4</button>
+              <button onclick="inc(5)">5</button>
+              <button onclick="inc(6)">6</button>
+              <button
+                onclick="op('-');"
+                style="
+                  background: linear-gradient(
+                    to right,
+                    yellow,
+                    rgb(236, 170, 45),
+                    orange
+                  );
+                "
+              >
+                -
+              </button>
+            </section>
+            <section>
+              <button onclick="inc(7)">7</button>
+              <button onclick="inc(8)">8</button>
+              <button onclick="inc(9)">9</button>
+              <button
+                onclick="op('+'); "
+                style="
+                  background: linear-gradient(
+                    to right,
+                    yellow,
+                    rgb(236, 170, 45),
+                    orange
+                  );
+                "
+              >
+                +
+              </button>
+            </section>
+            <section>
+              <button
+                onclick="a = String(a**2) , str = a, document.getElementById('result').innerHTML = str;"
+              >
+                ^2
+              </button>
+              <button onclick="inc(0)">0</button>
+              <button onclick="inc('.')">.</button>
+              <button
+                onclick="equalTo(operator)"
+                style="
+                  background: linear-gradient(
+                    to right,
+                    yellow,
+                    rgb(236, 170, 45),
+                    orange
+                  );
+                "
+              >
+                =
+              </button>
+            </section>
+          </center>
+        </div>
+      </div>
+    </center>
+  </body>
+</html>
+<script src="calculator.js"></script>
+<style>
+  button {
+    height: 100px;
+    width: 100px;
+    transition: 0.2s;
+    background-color: rgb(167, 164, 164);
+    border: solid;
+  }
+
+  button:hover {
+    background: linear-gradient(grey, black);
+  }
+</style>
